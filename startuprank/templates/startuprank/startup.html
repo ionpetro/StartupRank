@@ -1,0 +1,25 @@
+{% extends "startuprank/main.html" %}
+
+{% block content %}
+<ul class="list-group">
+  <li class="list-group-item">
+    Title: {{ startup.title }}
+  </li>
+  <li class="list-group-item">
+    Votes: {{ vote.votes }}
+  </li>
+  <li class="list-group-item">
+    Year established: {{ startup.estab_year }}
+  </li>
+  <li class="list-group-item"><span>Reviews:
+    <a href="{% url 'startuprank:reviews' startup.id %}">
+      <span class="badge badge-secondary">{{ startup.review_set.all.count }}</span>
+    </a>
+    <a href="{% url 'startuprank:reviews' startup.id %}">
+      <span class="fas fa-plus-circle" aria-hidden="true"></span></a>
+
+    </span>
+  </li>
+</ul>
+{% endblock %}
+
