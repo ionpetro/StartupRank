@@ -11,15 +11,19 @@ from django.views import generic
 from django.contrib.auth.models import User
 
 def index(request):
-    latest_startups_established = Startup.objects.order_by('-estab_year', 'title')[:10]
-    context = {'latest_startups_established': latest_startups_established}
-    return render(request, 'startuprank/index.html', context)
+    return render(request, 'startuprank/index.html', {})
 
 def about(request):
     return render(request, 'startuprank/about.html', {})
 
 def contact(request):
     return render(request, 'startuprank/contact.html', {})
+
+def allstartups(request):
+    latest_startups_established = Startup.objects.order_by('-estab_year', 'title')[:10]
+    context = {'latest_startups_established': latest_startups_established}
+    return render(request, 'startuprank/allstartups.html', context)
+
 
 def startup(request, startup_id):
     startup = get_object_or_404(Startup, pk=startup_id)

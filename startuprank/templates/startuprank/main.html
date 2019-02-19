@@ -12,7 +12,9 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="{% static "/startuprank/css/fontawesome-all.min.css" %}"/>
+          href="{% static "/startuprank/css/fontawesome-all.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "/startuprank/css/indexcss.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "/startuprank/css/bootstrap.min.css" %}">
 
     <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,7 +29,7 @@
     <title>{% block title %} StartUpRank {% endblock %}</title>
   </head>
 
-  <body>
+  <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/startuprank">StartupRank</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +38,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Signup</a>
+            <a class="nav-link" href="{% url 'startuprank:signup' %}">Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -55,19 +57,17 @@
         <h1>{% block heading %} <a href="/startuprank/" title="StartUpRank"> StartUpRank</a></h1>
  {% endblock %}
       </div>
-      <div class="col-md-offset-1 col-md-6">
+      <div class="col-md-offset-1 col-md-12">
         {% block content %}{% endblock %}
       </div>
     </div>
-    <div class="card">
-      <div class="card-header">
-        Contact us!
-      </div>
-      <div class="card-body">
-        <blockquote class="blockquote mb-0">
+    <div>
+      <div>
           <p></p>
-          <footer></footer>
-        </blockquote>
+          <footer>
+            <center><small>Copyright &copy;ionpetro.com - All rights Reserved</small></center>
+          </footer>
+        
       </div>
     </div>
 

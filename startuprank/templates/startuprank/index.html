@@ -3,26 +3,34 @@
 {% block content %}
 {% if user.is_authenticated %}
   <h1>Welcome {{ user.username }}!</h1>
-   <p><a href="{% url 'logout' %}">logout</a></p>
+  <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
+  <p>You are not logged in: <a href="{% url 'login' %}">Login</a></p>
 {% endif %}
+  <p>If you are not register: <a href="{% url 'startuprank:signup' %}">SignUp</a></p>
 
+  <section> <h2>All startups available: 
+    <a href="{% url 'startuprank:allstartups' %}">Here</a></h2>
+  </section>
 
-
-{% if latest_startups_established %}
+  <section id="about" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>About this page</h2>
+          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+          <ul>
+            <li>Clickable nav links that smooth scroll to page sections</li>
+            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
 <p><br></p>
-  <ul class="list-group">
-    {% for startup in latest_startups_established %}
-      <li class="list-group-item">
-        <a href= "{% url 'startuprank:startup' startup.id %}">{{ startup.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-{% else %}
-  <p>No startups are available.</p>
-{% endif %}
+
 
 
 {% endblock %}
