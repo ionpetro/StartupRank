@@ -54,5 +54,11 @@ By many, Cephalonia is considered as the Homeric Ithaca, the home of Odysseus.
 
 #### <a name="info"></a>Info
 What if I tell you that there is a place in Leukada from which you can see earth's curvature. (take that flat earth society!)
-![](/images/leukada.jpg)
+![](/images/leukada.png)
 It's simple. Grab your +1, get in the car(yes you can drive to the island) and start the most exciting experience of your life.
+
+#### <a name="food"></a>Food
+* [O Molos](https://www.facebook.com/omolos.lefkada/?ref=bookmarks&utm_source=tripadvisor&utm_medium=referral)
+* [T'aloni](http://www.t-aloni.gr/?utm_source=tripadvisor&utm_medium=referral) (wonderful view)
+
+
