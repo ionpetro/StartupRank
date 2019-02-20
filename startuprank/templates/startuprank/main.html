@@ -14,7 +14,8 @@
     <link rel="stylesheet"
           href="{% static "/startuprank/css/fontawesome-all.min.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "/startuprank/css/indexcss.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "/startuprank/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "/startuprank/css/scrolling-nav.css" %}">
+
 
     <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,51 +31,61 @@
   </head>
 
   <body id="page-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/startuprank">StartupRank</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'startuprank:signup' %}">Signup</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">Login</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">StartupRank</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{% url 'login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{% url 'startuprank:signup' %}">SignUp</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <p><br></p>
-    <div class="container">
-      <div class="jumbotron">
 
-        <h1>{% block heading %} <a href="/startuprank/" title="StartUpRank"> StartUpRank</a></h1>
- {% endblock %}
+    <header class="bg-secondary text-white">
+      <div class="container text-center">
+        <h1><a href="/startuprank/" title="StartUpRank"> StartUpRank</a></h1>
+        <p class="lead">Find your favourite Startup and Vote - Review it!</p>
       </div>
-      <div class="col-md-offset-1 col-md-12">
-        {% block content %}{% endblock %}
-      </div>
-    </div>
+    </header>
+
     <div>
-      <div>
-          <p></p>
-          <footer>
-            <center><small>Copyright &copy;ionpetro.com - All rights Reserved</small></center>
-          </footer>
-        
-      </div>
+      {% block content %}{% endblock %}
     </div>
+
+
+    <!-- footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy;ionpetro.com - All rights Reserved</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
     <!-- Optional JavaScript for Bootstrap --> 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static "/startuprank/js/scrolling-nav.js" %}"></script>
+
   </body>
 </html>

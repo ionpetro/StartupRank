@@ -1,16 +1,30 @@
 {% extends "startuprank/main.html" %}
 
 {% block content %}
-{% if user.is_authenticated %}
-  <h1>Welcome {{ user.username }}!</h1>
-  <p><a href="{% url 'logout' %}">logout</a></p>
-{% else %}
-  <p>You are not logged in: <a href="{% url 'login' %}">Login</a></p>
-{% endif %}
-  <p>If you are not register: <a href="{% url 'startuprank:signup' %}">SignUp</a></p>
-
-  <section> <h2>All startups available: 
+ 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+  {% if user.is_authenticated %}
+    <h1>Welcome {{ user.username }}!</h1>
+    <p><a href="{% url 'logout' %}">logout</a></p>
+  {% else %}
+    <p>You are not logged in: <a href="{% url 'login' %}">Login</a></p>
+  {% endif %}
+    <p>If you are not register: <a href="{% url 'startuprank:signup' %}">SignUp</a></p>]
+    </div>
+    </div>
+    </div>
+  
+  <section>
+        <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+    <h2>All startups available: 
     <a href="{% url 'startuprank:allstartups' %}">Here</a></h2>
+  </div>
+</div>
+</div>
   </section>
 
   <section id="about" class="bg-light">
@@ -29,8 +43,4 @@
       </div>
     </div>
 </section>
-<p><br></p>
-
-
-
 {% endblock %}
