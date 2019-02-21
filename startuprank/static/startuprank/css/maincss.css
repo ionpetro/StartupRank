@@ -2,16 +2,10 @@ html{ height:100%; }
 body{ min-height:100%; padding:0; margin:0; position:relative; }
 header{ 
   background-image: url("../../images/backround.jpg");
-  font-size: 60px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.header-text {
-  
-
-
-}
 /* Trick: */
 body {
   position: relative;

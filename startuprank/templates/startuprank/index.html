@@ -7,9 +7,9 @@
   <header class="head">
     <div class="container text-center">
       <a href="/startuprank/" title="StartUpRank"><h1 style="font-size:100px; font-family: sans-serif;" class="text-dark">StartupRank</h1></a>
-      <p class="lead">Find your favourite Startup and Vote - Review it!</p>
+      <p><h4>Find your favourite Startup and Vote - Review it!</h4></p>
       <h2>All startups available: </h2>
-      <a href="{% url 'startuprank:allstartups' %}"><button class="btn btn-primary btn-lg-active">Here</button></a>
+      <a href="{% url 'startuprank:allstartups' %}"><button class="btn btn-dark btn-lg-active">Here</button></a>
     </div>
   </header>
 
@@ -24,7 +24,7 @@
           <h5>You are not logged in: <a href="{% url 'login' %}">Login</a></h5>
         </div>
         <div class="d-inline float-right">
-          <h5>If you are not register: <a href="{% url 'startuprank:signup' %}">SignUp</a></h5>
+          <h5>If you have not registered: <a href="{% url 'startuprank:signup' %}">SignUp</a></h5>
         </div>
         {% endif %}
       </div>
