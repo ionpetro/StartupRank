@@ -3,10 +3,29 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+
+<header class="bg-secondary text-white">
+    <div class="container text-center">
+      <h1><a href="/startuprank/" title="StartUpRank"> StartUpRank</a></h1>
+      <p class="lead">Find your favourite Startup and Vote - Review it!</p>
+      <h2>All startups available: </h2>
+      <a href="{% url 'startuprank:allstartups' %}"><button class="btn btn-primary btn-lg-active">Here</button></a>
+    </div>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-lg-8 mx-auto">
+      	<p><br></p>
+				<form method="post">
+			  {% csrf_token %}
+			  {{ form.as_p }}
+			  <button type="submit">Login</button>
+			  <p><br></p>
+			</form>
+		</div>
+	</div>
+</div>
+
 {% endblock %}

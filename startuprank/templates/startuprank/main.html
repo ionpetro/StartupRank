@@ -33,7 +33,7 @@
   <body id="page-top">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#page-top">StartupRank</a>
+          <a class="navbar-brand js-scroll-trigger" href="/startuprank">StartupRank</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,17 +60,8 @@
       </nav>
     <p><br></p>
 
-    <header class="bg-secondary text-white">
-      <div class="container text-center">
-        <h1><a href="/startuprank/" title="StartUpRank"> StartUpRank</a></h1>
-        <p class="lead">Find your favourite Startup and Vote - Review it!</p>
-      </div>
-    </header>
 
-    <div>
-      {% block content %}{% endblock %}
-    </div>
-
+    {% block content %}{% endblock %}
 
     <!-- footer -->
     <footer class="py-5 bg-dark">
