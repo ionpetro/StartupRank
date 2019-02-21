@@ -1,33 +1,49 @@
 {% extends "startuprank/main.html" %}
 
 {% block content %}
-{% if not startup_reviews %}
-  <h2 class="bg-warning">No reviews yet.</h2>
-{% else %}
-  <div class="list-group">
-    {% for review in startup_reviews %}
-      <div class="list-group-item list-group-item-action flex-column
-                  align-items-start active">
-        <div class="d-flex w-100 justify-content-between">
-          <span class="mb=1">Summary: {{ review.title }}</span>
-          <span>
-            <a href="{% url 'startuprank:review' review.startup.id review.id %}">
-              <span class="fas fa-inverse fa-edit" aria-hidden="true"></span>
-            </a>
-        </span>
-        </div>
+
+  <header class="bg-secondary text-white">
+    <div class="container text-center">
+      <h1><a href="/startuprank/" title="StartUpRank"> StartUpRank</a></h1>
+      <p class="lead">Find your favourite Startup and Vote - Review it!</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <p><br></p>
+        {% if not startup_reviews %}
+          <h2 class="bg-warning">No reviews yet.</h2>
+        {% else %}
+          <div class="list-group">
+            {% for review in startup_reviews %}
+              <div class="list-group-item list-group-item-action flex-column
+                          align-items-start active">
+                <div class="d-flex w-100 justify-content-between">
+                  <span class="mb=1">Summary: {{ review.title }}</span>
+                  <span>
+                    <a href="{% url 'startuprank:review' review.startup.id review.id %}">
+                      <span class="fas fa-inverse fa-edit" aria-hidden="true"></span>
+                    </a>
+                </span>
+                </div>
+              </div>
+              <div class="list-group-item">
+                Review: {{ review.text }}
+              </div>
+              <div class="list-group-item">
+                Date reviewed: {{ review.review_date }}
+                {{ review.id }}
+              </div>
+              <p><br></p>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
-      <div class="list-group-item">
-        Review: {{ review.text }}
-      </div>
-      <div class="list-group-item">
-        Date reviewed: {{ review.review_date }}
-        {{ review.id }}
-      </div>
-      <p><br></p>
-    {% endfor %}
+    </div>
   </div>
-{% endif %}
+
 {% endblock %}
 
 

@@ -1,0 +1,32 @@
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:0; position:relative; }
+header{ 
+  background-image: url("../../images/backround.jpg");
+  font-size: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-text {
+  
+
+
+}
+/* Trick: */
+body {
+  position: relative;
+}
+
+
+body::after {
+  content: '';
+  display: block;
+  height: 50px; /* Set same as footer's height */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
