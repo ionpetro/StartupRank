@@ -10,6 +10,7 @@
     </div>
   </header>
 
+  <p><br></p>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
@@ -27,12 +28,10 @@
             <a href="{% url 'startuprank:reviews' startup.id %}">
               <span class="badge badge-secondary">{{ startup.review_set.all.count }}</span>
             </a>
-            <a href="{% url 'startuprank:reviews' startup.id %}">
-              <span class="fas fa-plus-circle" aria-hidden="true"></span></a>
-
             </span>
           </li>
         </ul>
+        <a href="{% url 'startuprank:add' startup.id %}">Add Review</a>
       </div>
     </div>
   </div>
