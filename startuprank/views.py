@@ -27,31 +27,6 @@ def reviews(request, startup_id):
     return render(request, 'startuprank/reviews.html',
         {'startup_reviews': startup_reviews })
 
-#form
-def review(request, startup_id, review_id=None):
-
-    if review_id is not None:
-        review = get_object_or_404(Review, pk=review_id)
-    else:
-        review = Review()
-        review.startup_id = startup_id
-
-    if request.method == 'POST':
-        review.title = request.POST['title']
-        review.text = request.POST['text']
-        review.review_date = timezone.now()
-        review.save()
-        return HttpResponseRedirect(reverse('startuprank:reviews', args=(startup_id,)))
-    else:
-        context = {
-        'startup_id': startup_id,
-        'review_id': review_id,
-        'title': review.title,
-        'text': review.text
-    }
-
-    return render(request, 'startuprank/review.html', context)
-
 def vote(request, startup_id):
     votes = Vote.objects.all()
     return render(request, 'startupranks/startup.html', {'votes':votes})
@@ -73,4 +48,4 @@ def add(request, startup_id):
 
         return HttpResponseRedirect(reverse('startuprank:reviews', args=(startup_id,)))
     else:
-        return render(request, 'add.html', )
+        return render(request, 'add.html')

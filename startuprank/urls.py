@@ -11,6 +11,5 @@ urlpatterns = [
     path('signup/', views.SignUp.as_view(), name='signup'),
     path('startups/<int:startup_id>/', views.startup, name='startup'),
     path('startups/<int:startup_id>/reviews/', views.reviews, name='reviews'),
-    path('startups/<int:startup_id>/reviews/<int:review_id>', views.review, name='review'),
     path('startups/<int:startup_id>/add/', views.add, name='add'),
 ]
