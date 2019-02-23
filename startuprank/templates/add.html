@@ -11,20 +11,32 @@
 </header>
 
 
+        
+
 <div class="container">
   <div class="row">
-    <div class="col-lg-6 mx-auto">
+    <div class="col-lg-8 mx-auto">
+      {% if user.is_authenticated %}
       <form method="post">
-        {% csrf_token %}
-          <label for="title">Title</label><br />
-          <input type="text" name="title" id="title" size="80">
-          <br>
-          <label for="text">Text</label><br>
-          <textarea name="text" id="text" rows="4" cols="78"></textarea>
-          <br><br>
-          <input type="submit" value="Submit">
+      {% csrf_token %}
+        <label for="title">Title</label><br />
+        <input type="text" name="title" id="title" size="80">
+        <br>
+        <label for="text">Text</label><br>
+        <textarea name="text" id="text" rows="4" cols="78"></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
       </form>
       <a href="/">Go back</a>
+      {% else %}
+        <div class="d-inline float-left">
+          <h5>You are not logged in: <a href="{% url 'login' %}">Login</a></h5>
+        </div>
+        <div class="d-inline float-right">
+          <h5>If you have not registered: <a href="{% url 'startuprank:signup' %}">SignUp</a></h5>
+        </div>
+        {% endif %}
+
     </div>
   </div>
 </div>

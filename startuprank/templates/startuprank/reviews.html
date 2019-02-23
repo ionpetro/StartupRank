@@ -19,7 +19,7 @@
           <div class="list-group">
             {% for review in startup_reviews %}
               <div class="list-group-item list-group-item-action flex-column
-                          align-items-start active">
+                          list-group-item-secondary align-items-start active">
                 <div class="d-flex w-100 justify-content-between">
                   <span class="mb=1">Summary: {{ review.title }}</span>
                 </div>
@@ -34,6 +34,7 @@
             {% endfor %}
           </div>
         {% endif %}
+        <p><br></p>
       </div>
     </div>
   </div>

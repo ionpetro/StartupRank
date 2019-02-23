@@ -8,6 +8,7 @@ class Startup(models.Model):
     title = models.CharField(max_length=200)
     estab_year = models.IntegerField('year established', default=2000)
     votes = models.IntegerField(default=0)
+    description = models.TextField(default="")
 
     #method that finds the startups that were established the last year
     def was_established_recently(self):
