@@ -26,11 +26,14 @@
       </form>
       <a href="/">Go back</a>
       {% else %}
+      <p><br></p>
+      <p><br></p>
+      <p><br></p>
         <div class="d-inline float-left">
-          <h5>You are not logged in: <a href="{% url 'login' %}">Login</a></h5>
+          <h4>You are not logged in: <a href="{% url 'login' %}">Login</a></h4>
         </div>
         <div class="d-inline float-right">
-          <h5>If you have not registered: <a href="{% url 'startuprank:signup' %}">SignUp</a></h5>
+          <h4>If you have not registered: <a href="{% url 'startuprank:signup' %}">SignUp</a></h4>
         </div>
         {% endif %}
 

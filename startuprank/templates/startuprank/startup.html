@@ -39,7 +39,10 @@
             </span>
           </li>
           </ul>
-           <a href="{% url 'startuprank:add' startup.id %}">Add Review</a>
+          <div class="inline">
+          <a href="{% url 'startuprank:add' startup.id %}"><button class="btn btn-dark btn-lg-active">Add Review</button></a>
+          <a href="../../allstartups/"><button class="btn btn-primary btn-lg-active">Go back</button></a>
+          </div>
           </div>
         </div>
       </div>
