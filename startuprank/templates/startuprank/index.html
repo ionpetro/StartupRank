@@ -20,6 +20,7 @@
           <h1>Welcome {{ user.username }}!
           <a href="{% url 'logout' %}"><h3>logout</h3></a></h1>
         {% else %}
+        <p><h3>Do you wanna review you favourite StartUp?</h3></p>
         <div class="d-inline float-left">
           <h5>You are not logged in: <a href="{% url 'login' %}">Login</a></h5>
         </div>
@@ -47,6 +48,22 @@
         </div>
       </div>
   </section>
+
+    <div class="clearfix">
+      <div class="box" style="background-color:#bbb">
+        <img src="../../static/images/backround.jpg" style="float:left;width:100%;height:100%;object-fit: cover;">
+      </div>
+      <div class="box" style="background-color:#ccc">
+    </div>
+
+    <div class="clearfix">
+      <div class="box" style="background-color:#ccc">
+      </div>
+      <div class="box" style="background-color:#bbb">
+        <img src="../../static/images/backround.jpg" style="float:left;width:100%;height:100%;object-fit: cover;">
+    </div>
+  </div>
+
 
   <section id="services" >
     <div class="container">
