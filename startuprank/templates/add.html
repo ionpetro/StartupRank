@@ -16,15 +16,16 @@
       {% if user.is_authenticated %}
       <form method="post">
       {% csrf_token %}
-        <label for="title">Title</label><br />
-        <input type="text" name="title" id="title" size="80">
+      <div class="form-group">
         <br>
-        <label for="text">Text</label><br>
-        <textarea name="text" id="text" rows="4" cols="78"></textarea>
-        <br><br>
-        <input type="submit" value="Submit">
+        <label for="title"><b>Title of the review</b></label>
+        <input class="form-control" type="text" name="title" id="title" size="80"><br>        
+        <label for="text"><b>Review</b><small> - In case of bad language the review will be deleted</small></label><br>
+        <textarea class="form-control" name="text" id="text" rows="4" cols="78"></textarea>
+        <br>
+        <button type="submit" value="Submit" class="btn btn-dark btn-lg-active">Go back</button>
+      </div>
       </form>
-      <a href="/">Go back</a>
       {% else %}
       <p><br></p>
       <p><br></p>
