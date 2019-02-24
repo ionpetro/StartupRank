@@ -6,20 +6,20 @@
   <header class="bg-secondary text-white">
     <div class="container text-center text-dark">
       <h1><a href="/startuprank/" title="StartUpRank" style="font-size:40px; font-family: sans-serif;" class="text-dark">StartupRank</a></h1>
-      <p><h4> Find your favourite Startup and Vote - Review it!</h4></p>
+      <p><h4> Find your favourite Startup and Review it!</h4></p>
     </div>
   </header>
 
 
 <div class="container">
   <div class="row">
-      <div class="col-lg-8 mx-auto">
-      	<p><br></p>
+      <div class="col-lg-6 mx-auto">
+      	<br>
 			{% if latest_startups_established %}
-			  <ul class="list-group">
+			  <ul id="otis">
 			    {% for startup in latest_startups_established %}
-			      <li class="list-group-item">
-			        <a href= "{% url 'startuprank:startup' startup.id %}">{{ startup.title }}</a>
+			      <li class="column">
+			        <a href= "{% url 'startuprank:startup' startup.id %}"><img border="2" width="150" alt="Image" src="{{ startup.image.url }}"></a><br>
 			      </li>
 			      <p><br></p>
 			    {% endfor %}

@@ -27,10 +27,6 @@ def reviews(request, startup_id):
     return render(request, 'startuprank/reviews.html',
         {'startup_reviews': startup_reviews })
 
-def vote(request, startup_id):
-    votes = Vote.objects.all()
-    return render(request, 'startupranks/startup.html', {'votes':votes})
-
 class SignUp(generic.CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
@@ -49,3 +45,4 @@ def add(request, startup_id):
         return HttpResponseRedirect(reverse('startuprank:reviews', args=(startup_id,)))
     else:
         return render(request, 'add.html')
+

@@ -2,24 +2,29 @@
 
 {% block content %}
 
-
   <header class="bg-secondary text-white">
     <div class="container text-center text-dark">
       <h1><a href="/startuprank/" title="StartUpRank" style="font-size:40px; font-family: sans-serif;" class="text-dark">StartupRank</a></h1>
-      <p><h4> Find your favourite Startup and Vote - Review it!</h4></p>
+      <p><h4> Find your favourite Startup and Review it!</h4></p>
     </div>
   </header>
 
+{% load static %}
+
   <p><br></p>
+
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-        <ul class="list-group">
-          <li class="list-group-item">
+        <div class="media">
+        <img class="media-left" width="250" alt="Image" src="{{ startup.image.url }}">
+          <div class="media-body">
+            <ul>
+            <li class="list-group-item">
             Title: {{ startup.title }}
           </li>
           <li class="list-group-item">
-            Votes: {{ vote.votes }}
+            Votes: {{ startup.votes }}
           </li>
           <li class="list-group-item">
             Year established: {{ startup.estab_year }}
@@ -29,12 +34,14 @@
           </li>
           <li class="list-group-item"><span>Reviews:
             <a href="{% url 'startuprank:reviews' startup.id %}">
-              <span class="badge badge-secondary">{{ startup.review_set.all.count }}</span>
+              <span class="badge badge-secondary">Watch all: {{ startup.review_set.all.count }}</span>
             </a>
             </span>
           </li>
-        </ul>
-        <a href="{% url 'startuprank:add' startup.id %}">Add Review</a>
+          </ul>
+           <a href="{% url 'startuprank:add' startup.id %}">Add Review</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
