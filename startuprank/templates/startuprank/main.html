@@ -44,10 +44,10 @@
                 <a class="nav-link js-scroll-trigger" href="/#about"><h5 class="fonts">About</h5></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#services"><h5 class="fonts">Services</h5></a>
+                <a class="nav-link js-scroll-trigger" href="/#services"><h5 class="fonts">Services</h5></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact"><h5 class="fonts">Contact</h5></a>
+                <a class="nav-link js-scroll-trigger" href="/#contact"><h5 class="fonts">Contact</h5></a>
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item">
@@ -89,6 +89,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static "/startuprank/js/scrolling-nav.js" %}"></script>
+
+    <script src="{% static "/startuprank/js/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "/startuprank/js/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static "/startuprank/js/jquery-easing/jquery.easing.min.js" %}"></script>
 
   </body>
 </html>

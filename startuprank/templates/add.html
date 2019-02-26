@@ -18,13 +18,13 @@
       {% csrf_token %}
       <div class="form-group">
         <br>
-        <label for="title"><b>Title of the review</b></label>
+        <label class="fonts" for="title"><h4>Title of the review</h4></label>
         <input class="form-control" type="text" name="title" id="title" size="80"><br>        
-        <label for="text"><b>Review</b><small> - In case of bad language the review will be deleted</small></label><br>
+        <label class="fonts" for="text"><h4>Review</h4><h5> - In case of bad language the review will be deleted</h5></label><br>
         <textarea class="form-control" name="text" id="text" rows="4" cols="78"></textarea>
         <br>
         <button type="submit" value="Submit" class="btn btn-dark btn-lg-active">Submit</button>
-        <button href="../../allstartups/" class="btn btn-primary">Go back</button>
+        <button class="btn btn-primary"><a class="a" href="{% url 'startuprank:allstartups' %}">Go back</a></button>
       </div>
       </form>
       {% else %}
