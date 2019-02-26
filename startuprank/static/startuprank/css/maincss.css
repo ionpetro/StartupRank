@@ -9,6 +9,7 @@ header{
 /* Trick: */
 body {
   position: relative;
+  font-family: 'Lobster', cursive;
 }
 
 
@@ -67,4 +68,24 @@ footer {
   content: "";
   clear: both;
   display: table;
+}
+
+#no-padding {
+  padding: 0px;
+
+}
+
+#extra-padding {
+  margin: auto;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-bottom: auto;
+  padding-top: 190px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+
+.fonts {
+  font-family: 'Lobster', cursive;
 }

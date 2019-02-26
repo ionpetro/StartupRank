@@ -15,6 +15,7 @@
           href="{% static "/startuprank/css/fontawesome-all.min.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "/startuprank/css/maincss.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "/startuprank/css/scrolling-nav.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
 
 
     <!-- Bootstrap CSS -->
@@ -27,33 +28,40 @@
       integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
       crossorigin="anonymous">
 
-    <title>{% block title %} StartUpRank {% endblock %}</title>
+    <title>{% block title %}StartUpRank {% endblock %}</title>
   </head>
 
   <body id="page-top">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="/startuprank">StartupRank</a>
+          <a class="navbar-brand js-scroll-trigger" href="/startuprank"><h4 class="fonts">StartUpRank</h4></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                <a class="nav-link js-scroll-trigger" href="#about"><h5 class="fonts">About</h5></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                <a class="nav-link js-scroll-trigger" href="#services"><h5 class="fonts">Services</h5></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                <a class="nav-link js-scroll-trigger" href="#contact"><h5 class="fonts">Contact</h5></a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}"><h5 class="fonts">Logout</h5></a>
+              </li> 
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}"><h5 class="fonts">Login</h5></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-link" href="{% url 'startuprank:signup' %}"><h5 class="fonts">SignUp</h5></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'startuprank:signup' %}">SignUp</a>
-              </li>
+              {% endif %}
+          
             </ul>
           </div>
         </div>
