@@ -41,7 +41,7 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about"><h5 class="fonts">About</h5></a>
+                <a class="nav-link js-scroll-trigger" href="/#about"><h5 class="fonts">About</h5></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#services"><h5 class="fonts">Services</h5></a>
@@ -52,7 +52,10 @@
               {% if user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'logout' %}"><h5 class="fonts">Logout</h5></a>
-              </li> 
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><h5 class="fonts text-white">{{user.username}}</h5></a>
+              </li>
               {% else %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}"><h5 class="fonts">Login</h5></a>
@@ -73,7 +76,7 @@
     ]{% endblock %}
 
     <!-- footer -->
-    <footer class="py-5 bg-dark foot">
+    <footer class="py-5 bg-dark foot fonts">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy;ionpetro.com - All rights Reserved</p>
       </div>

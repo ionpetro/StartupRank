@@ -6,7 +6,7 @@
 <header class="bg-secondary text-white">
   <div class="container text-center text-dark">
     <h1 class="fonts"><a href="/startuprank/" title="StartUpRank" style="font-size:40px;" class="text-dark">StartupRank</a></h1>
-    <p><h4> Find your favourite Startup and Review it!</h4></p>
+    <p><h3 class="fonts"> Find your favourite Startup and Review it!</h3></p>
   </div>
 </header>
 
@@ -24,20 +24,17 @@
         <textarea class="form-control" name="text" id="text" rows="4" cols="78"></textarea>
         <br>
         <button type="submit" value="Submit" class="btn btn-dark btn-lg-active">Submit</button>
-        <button class="btn btn-primary"><a href="../../allstartups/">Go back</a></button>
+        <button href="../../allstartups/" class="btn btn-primary">Go back</button>
       </div>
       </form>
       {% else %}
       <p><br></p>
       <p><br></p>
-      <p><br></p>
-        <div class="d-inline float-left">
-          <h4>You are not logged in: <a href="{% url 'login' %}">Login</a></h4>
-        </div>
-        <div class="d-inline float-right">
-          <h4>If you have not registered: <a href="{% url 'startuprank:signup' %}">SignUp</a></h4>
-        </div>
-        {% endif %}
+      <div class="alert alert-info" role="alert">
+        Oopsie! If you want to add a review why don't you login first? <a href="{% url 'login' %}" class="alert-link">Login</a>. Give it a click if you like.
+        <br>If you are not register try this: <a href="{% url 'startuprank:signup' %}" class="alert-link">SignUp</a>
+      </div>
+      {% endif %}
 
     </div>
   </div>
