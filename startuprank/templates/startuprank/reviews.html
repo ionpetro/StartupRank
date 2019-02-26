@@ -13,6 +13,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <p><br></p>
+        <h3 class="fonts">All reviews:</h3>
         {% if not startup_reviews %}
           <h2 class="bg-warning">No reviews yet.</h2>
         {% else %}
@@ -34,6 +35,8 @@
             {% endfor %}
           </div>
         {% endif %}
+        <a href="{% url 'startuprank:allstartups' %}"><button class="btn btn-primary btn-lg-active">Go back</button></a>
+        <p><br></p>
         <p><br></p>
       </div>
     </div>
