@@ -11,4 +11,4 @@ This website was created as a bonus project within the course Information System
 * Let's discuss about it there
 * Contribute
 
-### The project is soon going to be uploading on a Cloud Server! (Under Construction)
+### The project is soon going to be uploaded on a Cloud Server! (Under Construction)
