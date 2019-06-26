@@ -1,2 +1,1 @@
-web: gunicorn StartupRank.wsgi
-web: python manage.py runserver
+web: gunicorn StartupRank.wsgi --log-file -
