@@ -1,1 +1,1 @@
-web: gunicorn Startup_Rank.wsgi
+web: gunicorn StartupRank.wsgi
