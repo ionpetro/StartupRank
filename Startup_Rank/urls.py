@@ -18,7 +18,7 @@ from django.urls import include, path
 
 from django.http.response import HttpResponseRedirect
 
-from StartupRank import settings
+from Startup_Rank import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
