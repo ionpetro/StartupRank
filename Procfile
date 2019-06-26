@@ -1,1 +1,1 @@
-web: gunicorn StartupRank.wsgi --log-file -
+web: gunicorn Startup_Rank.wsgi --log-file -
